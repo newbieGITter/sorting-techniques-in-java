@@ -1,16 +1,16 @@
-package com.devon.bubblesort;
+package com.devon.selectionsort;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class BubbleSortTest {
+public class SelectionSortTest {
 
-	private BubbleSort bubbleSort;
+	private SelectionSort bubbleSort;
 	
 	@Before
 	public void setUpBeforeClass() throws Exception {
-		bubbleSort = new BubbleSort();
+		bubbleSort = new SelectionSort();
 	}
 
 	@Test
