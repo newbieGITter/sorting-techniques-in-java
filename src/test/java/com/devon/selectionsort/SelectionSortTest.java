@@ -6,18 +6,18 @@ import org.junit.Test;
 
 public class SelectionSortTest {
 
-	private SelectionSort bubbleSort;
+	private SelectionSort selectionSort;
 	
 	@Before
 	public void setUpBeforeClass() throws Exception {
-		bubbleSort = new SelectionSort();
+		selectionSort = new SelectionSort();
 	}
 
 	@Test
 	public void test() {
 		int[] inputArray = {11, 33, 22, 44, 66, 55, 9};
 		
-		int[] sortedNumbers = bubbleSort.sortNumbers(inputArray);
+		int[] sortedNumbers = selectionSort.sortNumbers(inputArray);
 	
 		Assert.assertEquals(9, sortedNumbers[0]);
 		Assert.assertEquals(11, sortedNumbers[1]);
