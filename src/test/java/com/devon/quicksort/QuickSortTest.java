@@ -1,7 +1,6 @@
-package com.devon.mergesort;
+package com.devon.quicksort;
 
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -9,8 +8,9 @@ import java.util.Random;
 import org.junit.Before;
 import org.junit.Test;
 
-public class MergeSortTest {
-	
+
+public class QuickSortTest {
+
 	private int[] numbers;
 	private static final int SIZE = 1000;
 	private static final int MAX = 500;
@@ -29,12 +29,12 @@ public class MergeSortTest {
 	public void testMergeSort() {
 		long startTime = System.currentTimeMillis();
 		
-		MergeSort ms = new MergeSort();
+		QuickSort ms = new QuickSort();
 		ms.sort(numbers);
 		
 		long stopTime = System.currentTimeMillis();
 		long elapsedTime = stopTime - startTime;
-		System.out.println("Merge Sort took: " + elapsedTime);
+		System.out.println("Quick Sort took: " + elapsedTime);
 		
 		for (int i = 0; i < numbers.length - 1; i++) {
             if (numbers[i] > numbers[i + 1]) {
@@ -52,7 +52,7 @@ public class MergeSortTest {
             for (int a = 0; a < numbers.length; a++) {
                 numbers[a] = generator.nextInt(MAX);
             }
-            MergeSort sorter = new MergeSort();
+            QuickSort sorter = new QuickSort();
             sorter.sort(numbers);
             for (int j = 0; j < numbers.length - 1; j++) {
                 if (numbers[j] > numbers[j + 1]) {
@@ -78,5 +78,6 @@ public class MergeSortTest {
         }
         assertTrue(true);
     }
+
 
 }
